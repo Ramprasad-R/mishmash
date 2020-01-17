@@ -1,0 +1,9 @@
+body{
+  text-align: center;
+  margin: 150px auto;
+  width: 20%;
+  height: auto;
+  border: 3px solid #000;
+  border-radius: 10%;
+  padding:20px 0 20px 0;
+}
