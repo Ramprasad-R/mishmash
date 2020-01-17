@@ -1,13 +1,16 @@
-
-async function getSWApiData() {
+const diasplayDataContainer = document.querySelector(".displaySWName");
+async function getSWApiData(url) {
   try {
-    const response = await fetch("https://swapi.co/api/people/1/");
+    diasplayDataContainer.innerHTML = '<p> Loading data... </p>'
+    const response = await fetch(url);
     const parsedResponse = await response.json();
-    document.querySelector(".displaySWName").innerHTML = `<p> ${parsedResponse.name} </p>`
+    diasplayDataContainer.innerHTML = `<p> Name       :  ${parsedResponse.name} </p>`;
+    diasplayDataContainer.innerHTML += `<p> Height     :  ${parsedResponse.height} </p>`;
+    diasplayDataContainer.innerHTML += `<p> Birth Year :  ${parsedResponse.birth_year} </p>`;
   }
   catch (err) {
     console.log(err);
   }
 }
 
-getSWApiData();
+getSWApiData("https://swapi.co/api/people/1/");
