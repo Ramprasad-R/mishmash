@@ -16,8 +16,6 @@ module.exports = class ShoppingCart {
     this.currentCart = [];
   }
   total() {
-    return this.currentCart.reduce((total, item) => {
-      return total + (item.pricePerUnit * item.quantity)
-    }, 0)
+    return this.currentCart.reduce((total, item) => total + (item.pricePerUnit * item.quantity), 0)
   }
 }
