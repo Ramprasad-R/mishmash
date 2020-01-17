@@ -1,7 +1,7 @@
-class ShoppingCart {
+module.exports = class ShoppingCart {
   constructor(){
 
   }
 }
 
-module.exports.ShoppingCart = ShoppingCart;
+//module.exports.ShoppingCart = ShoppingCart;
