@@ -2,20 +2,14 @@ module.exports = class ShoppingCart {
   constructor() {
     this.currentCart = [];
   }
-  getItems() {
-    return this.currentCart
-  }
-  addItem(itemName, quantity, price) {
+  getItems = () => this.currentCart;
+  addItem = (itemName, quantity, price) => {
     const currentCartItem = {}
     currentCartItem.name = itemName;
     currentCartItem.quantity = quantity;
     currentCartItem.pricePerUnit = price;
     this.currentCart.push(currentCartItem)
   }
-  clear() {
-    this.currentCart = [];
-  }
-  total() {
-    return this.currentCart.reduce((total, item) => total + (item.pricePerUnit * item.quantity), 0)
-  }
+  clear = () => this.currentCart = [];
+  total = () => this.currentCart.reduce((total, item) => total + (item.pricePerUnit * item.quantity), 0);
 }
