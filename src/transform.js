@@ -1,5 +1,5 @@
-const groupAdultsByAgeRange = (Array) => {
-  return Array.reduce((categoryByAge, currentPerson) => {
+const groupAdultsByAgeRange = (people) => {
+  return people.reduce((categoryByAge, currentPerson) => {
     if(currentPerson.age >= 18 && currentPerson.age <= 20){
       categoryByAge['20 and younger'] === undefined ? categoryByAge['20 and younger'] = [currentPerson] : categoryByAge['20 and younger'].push(currentPerson)
     }
